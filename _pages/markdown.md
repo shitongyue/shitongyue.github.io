@@ -1,11 +1,11 @@
-<!-- ---
+---
 permalink: /markdown/
-title: "中文"
+title: "Markdown"
 author_profile: true
 redirect_from: 
   - /md/
   - /markdown.html
---- -->
+---
 
 ## Locations of key files/directories
 
@@ -135,7 +135,7 @@ Make any link standout more when applying the `.btn` class.
 
 ### Anchor Tag (aka. Link)
 
-This is an example of a [link](https://github.com "Github").
+This is an example of a [link](http://github.com "Github").
 
 ### Abbreviation Tag
 

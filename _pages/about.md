@@ -1,146 +1,74 @@
 ---
 permalink: /
-title: "About ERTool"
-excerpt: "About ERTool"
+title: "About Me"
+excerpt: "About me"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
-# ERTool
 
-<kbd>***ERTool***</kbd> is a Python Package for Simple and Efficient Implementation of Multi-source Evidence Fusion Based on the Evidential Reasoning Approach It aims to provide an intuitive and flexible approach for integrating ER processes, particularly suitable for data analysis and decision support systems.
+<span style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">I am a Ph.D. student in Computer Software and Theory at [School of Computer Science](http://cs.pku.edu.cn/), [Peking University](https://www.pku.edu.cn/), advised by Prof.[Minghui Zhou](http://minghuizhou.github.io) at [Open Source Software Data Analytics Lab](https://osslab-pku.github.io/). Prior to this, I earned my Bachelor's Degree in Software Engineering from [Soochow University](https://www.suda.edu.cn/) in 2022, where I was mentored by Prof. [Xiaofang Zhang](http://web.suda.edu.cn/xfzhang/). My research interests mainly focus on open-source license compliance issues in open-source software ecosystems and supply chains.</span>
 
-## Features
+<span style="color:#6b5d40">Education</span>
+----------
+- 09/2022~Now, *Peking University*, Ph.D. student in Computer Software and Theory
+- 09/2018~06/2022, *Soochow University*, Bachelor of Software Engineering
 
-- Easy-to-use implementation of Evidential Reasoning.
-- Efficient in handling complex ER tasks.
-- Flexible interface suitable for various application scenarios.
+  
+<span style="color:#6b5d40">Publications</span>
+--------
+**Conference**
 
-## Installation
+1. **<span style="color:#0b5394">[ASE'23]</span>Understanding and Remediating Open-Source License Incompatibilities in the PyPI Ecosystem <span style="color:#0b5394">(CCF A)</span>**   
+    **Weiwei Xu**\*, Hao He\*, Kai Gao and Minghui Zhou [[PDF](https://arxiv.org/pdf/2308.05942.pdf)]
+    In: the 38th IEEE/ACM International Conference on Automated Software Engineering, September 11-15, 2023, Luxembourg.
+   
+3. **<span style="color:#0b5394">[ESEC/FSE'23]</span>How Early Participation Determines Long-Term Sustained Activity in GitHub Projects? <span style="color:#0b5394">(CCF A)</span>**   
+   Wenxin Xiao, Hao He, **Weiwei Xu**, Yuxia Zhang and Minghui Zhou [[PDF](https://arxiv.org/pdf/2308.06005.pdf)]
+    In: 31st ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering, San Francisco, USA, 11 - 17 November 2023.
 
-You can install <kbd>***ERTool***</kbd> directly from PyPI using pip:
+4. **<span style="color:#0b5394">[ICSE'23 DEMO]</span>LicenseRec: Knowledge based Open Source License Recommendation for OSS Projects**   
+    **Weiwei Xu**, Xin Wu, Runzhi He and Minghui Zhou[[PDF](https://zhcxww.github.io/files/LicenseRec_DEMO.pdf)]
+    In: The 45th IEEE/ACM International Conference on Software Engineering, May 14-20, 2023, Melbourne, Australia.
+    
+5. **<span style="color:#0b5394">[SANER'23]</span>Characterize Software Release Notes of GitHub Projects: Structure, Writing Style, and Content <span style="color:#0b5394">(CCF B)</span>**   
+    Jianyu Wu, **Weiwei Xu**, Kai Gao, Jingyue Li and Minghui Zhou[[PDF](https://zhcxww.github.io/files/SANER23 _final.pdf)]
+    In: The 30th IEEE International Conference on Software Analysis, Evolution and Reengineering, March 21st-24th, 2023, Macao SAR, China.
+    
+6. **<span style="color:#0b5394">[ICSE'22]</span>Recommending Good First Issues in GitHub OSS Projects <span style="color:#0b5394">(CCF A)</span>**   
+    Wenxin Xiao, Hao He, **Weiwei Xu** , Xin Tan , Jinhao Dong , Minghui Zhou [[PDF](https://dl.acm.org/doi/pdf/10.1145/3510003.3510196)] 
+    In: The 44th International Conference on Software Engineering, May 21-29, 2022, Pittsburgh, PA, USA. 
+    
+7. **<span style="color:#0b5394">[SEKE'21]</span>Multi-granularity code smell detection using deep learning method based on abstract syntax tree <span style="color:#0b5394">(CCF C)</span>**   
+    **Weiwei Xu** and Xiaofang Zhang [[PDF](https://ksiresearch.org/seke/seke21paper/paper014.pdf)] 
+    In: The 33rd International Conference on Software Engineering and Knowledge Engineering(SEKE), July 1-10, 2021, Pittsburgh, USA.
+    
 
-```
-pip install ertool
-```
+**Journal**
+1. **<span style="color:#0b5394">[Journal of Software 软件学报]</span>Survey on quality of software code comments.软件中代码注释质量问题研究综述 <span style="color:#0b5394">(中文CCF A)</span>**   
+    Chao Wang, **Weiwei Xu** and Minghui Zhou[[PDF](https://zhcxww.github.io/files/jos_codecomment.pdf)]
+    In: Journal of Software. Accepted in April 2023.
+   
+<span style="color:#6b5d40">Teaching Experience</span>
+----------
+- **Java Programming, Teaching Assistant, Spring 2023**
 
-## Using Instruction
-
-### er_algorithm
-
-```python
-ertool.er.er_algorithm(W, DBF, numOfEvidence, numOfPropositions)
-```
-<kbd>er_algorithm()</kbd> can implement the Evidential Reasoning (ER) algorithm.
-
-#### Input Variables
-- ***W***: A one-dimensional array of floats. It represents the weights of each piece of evidence. These weights are used in the algorithm to adjust the influence of each evidence.
-- ***DBF***: A two-dimensional array of floats. It stands for "Degrees of Belief" and is one of the main inputs to the algorithm, used to represent the initial belief degree of each proposition supported by each evidence.
-- ***numOfEvidence***: An integer. It indicates the number of evidence to be combined. In the DBF array, this typically corresponds to the number of rows.
-- ***numOfPropositions***: An integer. It indicates the number of propositions or evidential grades. In the DBF array, this typically corresponds to the number of columns.
-
-#### Output Values
-- ***B Array***: Upon completion of the algorithm, the B array is updated with the final calculation results. It reflects the degree of belief of each proposition or evidential grades for the object being assessed after combining all availble evidence. The pre-Numofproposition values in the B represent the belief degree of each proposition after evidence fusion. The last value of the B represents the belief degree of the global uncertainty.
-- ***False (Boolean)***: It returns True if the algorithm successfully executes and completes all computations. If any error is encountered during execution (e.g., division by zero), it returns False.
-
-
-### dempster_shafer
-```python
-ertool.er.dempster_shafer(DBF, numOfEvidence, numOfPropositions)
-```
-
-<kbd>dempster_shafer()</kbd> can implement the original Dempster-Shafer evidence theory.
-
-#### Input Variables
-- ***DBF***: A two-dimensional array of floats. It stands for "Degrees of Belief" and is one of the main inputs to the algorithm, used to represent the initial belief degree of each proposition supported by each evidence. The pre-Numofproposition values in the B represent the belief degree of each proposition after evidence fusion. The last value of the B represents the belief degree of the global uncertainty.
-- ***numOfEvidence***: An integer. It indicates the number of evidence to be combined. In the DBF array, this typically corresponds to the number of rows.
-- ***numOfPropositions***: An integer. It indicates the number of propositions or evidential grades. In the DBF array, this typically corresponds to the number of columns.
-
-#### Output Values
-- ***B Array***: Upon completion of the algorithm, the B array is updated with the final calculation results. It reflects the degree of belief of each proposition or evidential grades for the object being assessed after combining all availble evidence.
-- ***False (Boolean)***: It returns True if the algorithm successfully executes and completes all computations. If any error is encountered during execution (e.g., division by zero), it returns False.
+  School of EECS, Peking University
 
 
-### show_er_result
+<!-- <span style="color:#6b5d40">Patents</span>
+---------
+-  -->
 
-```python
-ertool.er.show_er_result(B, P = None)
-```
-<kbd>er.show_er_result()</kbd> can visualize the result of evidential reasoning algorithm.
+<span style="color:#6b5d40">Awards & Honers</span>
+---------------
 
-#### Input Variables
-- ***B***: The ER result of belief degree.
-- ***P***: The name array of propositions.
+- 2022, Outstanding Graduate of Jiangsu Province, Soochow University
+- 2021, Merit Student of Jiangsu Province, Soochow University
+- 2020, National Scholarship, Soochow University
 
-### run_algorithm_from_file
-```python
-ertool.er.run_algorithm_from_file(file_path, algorithm = ’ER’)
-```
+<span style="color:#6b5d40">Hobbies</span>
+----------------
+Fitness and photography
 
-<kbd>run_algorithm_from_file()</kbd> reads CSV or XLSX files and performs multi-source evidence fusion on the data using ER approach or Dempster-Shafer’s theory.
-
-#### Input Variables
-- ***file_path***: A string. The location of the CSV or XLSX file. Note that the format of data strictly follows the format of the provided template.
-- ***algorithm***: ’ER’ or ’DS’. ‘ER’ stands for using the ER approach, and ’DS’ stands for using the Dempster-Shafer theory.
-
-#### Output
-- ***B Array***: Upon completion of the algorithm, the B array is updated with the final calculation results. It reflects the degree of belief in each proposition or evaluation grade for the object being assessed after combining all available evidence. The first numofPropositions members in the B represent the belief degree in each proposition after evidence fusion. The last member of the B represents the belief degree in the global uncertainty.
-- ***False (Boolean)***: It returns True if the algorithm successfully executes and completes all computations. If any error is encountered during execution (e.g., division by zero), it returns False.
-
-## Quick Start
-Here is a basic usage example of <kbd>***ERTool***</kbd>.
-
-Consider a medical scenario. 
-There are three medical experts (weights 10, 8, and 5). For one patient, the three experts rated the different likelihood of the diagnosis of cold, common pneumonia, COVID-19, and other diseases. As shown in the table.
-
-| Experts & Diseases | Expert 1 | Expert 2 | Expert 3 |
-| :---:        |    :----:   |  :---: |  :---: |
-| Cold | 90% | 0 | 0 |
-| Common Pneumonia |0 | 90% | 0|
-| COVID-19 | 0 | 0 | 90% |
-
-In this case, the ***numOfEvidence*** is 3 (the number of experts) and the ***numOfPropositions*** is 3 (cold, common pneumonia and COVID-19).
-
-The ***W*** array is the weights array of every expert and the <kbd>***ERTool***</kbd> package can normalize them automatically.
-
-We can write the code using the <kbd>***ERTool***</kbd> package:
-
-```python
-from ertool import er
-import numpy as np
-
-W = np.array([10,8,5])
-DBF = np.array([[0.9, 0, 0], 
-                [0, 0.9, 0], 
-                [0, 0, 0.9]])
-
-# List or numpy array are both OK.
-# W = [10,8,5]
-# DBF = [[0.9, 0, 0], 
-#        [0, 0.9, 0], 
-#        [0, 0, 0.9]]
-
-numOfEvidence = 3
-numOfPropositions = 3
-B = er.er_algorithm(W, DBF, numOfEvidence, numOfPropositions)
-print("The result: ", B)
-
-P = ['Cold', 'Common Pneumonia', 'COVID-19']
-er.show_er_result(B, P)
-```
-With the code, we can calculate the probability that the patient will be diagnosed with each disease using evidential reasoning.
-
-```
-The result: [0.43317251 0.307059 0.16390311 0.09586537]
-```
-The calculation results show that the probability of the patient being diagnosed with a cold, common pneumonia, and COVID-19 are 0.43317251, 0.307059, and 0.16390311, respectively. The last member of B represents global uncertainty, and it is 0.09586537 in this example.
-
-## Contributing
-Contributions to <kbd>***ERTool***</kbd> are welcome. Please contact us for how to contribute to the project.
-
-## Reference
-Tongyue Shi, Liya Guo, Zeyuan Shen, Guilan Kong. ERTool: A Python Package for Simple and Efficient Implementation of Multi-source Evidence Fusion Based on the Evidential Reasoning Approach. Health Data Science. 2024.
-
-## Contact
-This project is supported by **[Peking University](https://english.pku.edu.cn/)**. For any questions or suggestions, please contact us at *tyshipku@gmail.com*.

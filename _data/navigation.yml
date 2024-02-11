@@ -1,32 +1,22 @@
 # main links links
 main:
+  # - title: "Publications"
+  #   url: /publications/
 
-  # - title: "Introdction"
-  #   url: /cv/
+  # - title: "Talks"
+  #   url: /talks/    
 
+  # - title: "Teaching"
+  #   url: /teaching/    
+    
   # - title: "Portfolio"
   #   url: /portfolio/
         
   # - title: "Blog Posts"
   #   url: /year-archive/
-  
-  # - title: "Chinese"
+    
+  # - title: "CV"
+  #   url: /cv/
+    
+  # - title: "Guide"
   #   url: /markdown/
-
-  # - title: "Experience"
-  #   url: /experience/
-
-  # - title: "Awards & Honors"
-  #   url: /awards/
-
-  # - title: "Works"
-  #   url: /works/
-
-  - title: "Start"
-    url: 'http://120.53.241.60:8008/'
-
-  # - title: "Learning"
-  #   url: /teaching/    
-
-  - title: "Chinese"
-    url: /cn/
