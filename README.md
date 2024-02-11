@@ -1,31 +1,137 @@
-A Github Pages template for academic websites. This was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License. See LICENSE.md.
+# ERTool & ERTool Online
 
-I think I've got things running smoothly and fixed some major bugs, but feel free to file issues or make pull requests if you want to improve the generic template / theme.
+<kbd>***ERTool***</kbd> is a Python Package for Simple and Efficient Implementation of Multi-source Evidence Fusion Based on the Evidential Reasoning Approach It aims to provide an intuitive and flexible approach for integrating ER processes, particularly suitable for data analysis and decision support systems.
 
-### Note: if you are using this repo and now get a notification about a security vulnerability, delete the Gemfile.lock file. 
+## Features
 
-# Instructions
+- Easy-to-use implementation of Evidential Reasoning.
+- Efficient in handling complex ER tasks.
+- Flexible interface suitable for various application scenarios.
 
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Fork [this repository](https://github.com/academicpages/academicpages.github.io) by clicking the "fork" button in the top right. 
-1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](http://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
-1. (Optional) Use the Jupyter notebooks or python scripts in the `markdown_generator` folder to generate markdown files for publications and talks from a TSV file.
+## Installation
 
-See more info at https://academicpages.github.io/
+You can install <kbd>***ERTool***</kbd> directly from PyPI using pip:
 
-## To run locally (not on GitHub Pages, to serve on your own computer)
+```
+pip install ertool
+```
 
-1. Clone the repository and made updates as detailed above
-1. Make sure you have ruby-dev, bundler, and nodejs installed: `sudo apt install ruby-dev ruby-bundler nodejs`
-1. Run `bundle clean` to clean up the directory (no need to run `--force`)
-1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
-1. Run `bundle exec jekyll liveserve` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change.
+## Using Instruction
 
-# Changelog -- bugfixes and enhancements
+### er_algorithm
 
-There is one logistical issue with a ready-to-fork template theme like academic pages that makes it a little tricky to get bug fixes and updates to the core theme. If you fork this repository, customize it, then pull again, you'll probably get merge conflicts. If you want to save your various .yml configuration files and markdown files, you can delete the repository and fork it again. Or you can manually patch. 
+```python
+ertool.er.er_algorithm(W, DBF, numOfEvidence, numOfPropositions)
+```
+<kbd>er_algorithm()</kbd> can implement the Evidential Reasoning (ER) algorithm.
 
-To support this, all changes to the underlying code appear as a closed issue with the tag 'code change' -- get the list [here](https://github.com/academicpages/academicpages.github.io/issues?q=is%3Aclosed%20is%3Aissue%20label%3A%22code%20change%22%20). Each issue thread includes a comment linking to the single commit or a diff across multiple commits, so those with forked repositories can easily identify what they need to patch.
+#### Input Variables
+- ***W***: A one-dimensional array of floats. It represents the weights of each piece of evidence. These weights are used in the algorithm to adjust the influence of each evidence.
+- ***DBF***: A two-dimensional array of floats. It stands for "Degrees of Belief" and is one of the main inputs to the algorithm, used to represent the initial belief degree of each proposition supported by each evidence.
+- ***numOfEvidence***: An integer. It indicates the number of evidence to be combined. In the DBF array, this typically corresponds to the number of rows.
+- ***numOfPropositions***: An integer. It indicates the number of propositions or evidential grades. In the DBF array, this typically corresponds to the number of columns.
+
+#### Output Values
+- ***B Array***: Upon completion of the algorithm, the B array is updated with the final calculation results. It reflects the degree of belief of each proposition or evidential grades for the object being assessed after combining all availble evidence. The pre-Numofproposition values in the B represent the belief degree of each proposition after evidence fusion. The last value of the B represents the belief degree of the global uncertainty.
+- ***False (Boolean)***: It returns True if the algorithm successfully executes and completes all computations. If any error is encountered during execution (e.g., division by zero), it returns False.
+
+
+### dempster_shafer
+```python
+ertool.er.dempster_shafer(DBF, numOfEvidence, numOfPropositions)
+```
+
+<kbd>dempster_shafer()</kbd> can implement the original Dempster-Shafer evidence theory.
+
+#### Input Variables
+- ***DBF***: A two-dimensional array of floats. It stands for "Degrees of Belief" and is one of the main inputs to the algorithm, used to represent the initial belief degree of each proposition supported by each evidence. The pre-Numofproposition values in the B represent the belief degree of each proposition after evidence fusion. The last value of the B represents the belief degree of the global uncertainty.
+- ***numOfEvidence***: An integer. It indicates the number of evidence to be combined. In the DBF array, this typically corresponds to the number of rows.
+- ***numOfPropositions***: An integer. It indicates the number of propositions or evidential grades. In the DBF array, this typically corresponds to the number of columns.
+
+#### Output Values
+- ***B Array***: Upon completion of the algorithm, the B array is updated with the final calculation results. It reflects the degree of belief of each proposition or evidential grades for the object being assessed after combining all availble evidence.
+- ***False (Boolean)***: It returns True if the algorithm successfully executes and completes all computations. If any error is encountered during execution (e.g., division by zero), it returns False.
+
+
+### show_er_result
+
+```python
+ertool.er.show_er_result(B, P = None)
+```
+<kbd>er.show_er_result()</kbd> can visualize the result of evidential reasoning algorithm.
+
+#### Input Variables
+- ***B***: The ER result of belief degree.
+- ***P***: The name array of propositions.
+
+### run_algorithm_from_file
+```python
+ertool.er.run_algorithm_from_file(file_path, algorithm = ’ER’)
+```
+
+<kbd>run_algorithm_from_file()</kbd> reads CSV or XLSX files and performs multi-source evidence fusion on the data using ER approach or Dempster-Shafer’s theory.
+
+#### Input Variables
+- ***file_path***: A string. The location of the CSV or XLSX file. Note that the format of data strictly follows the format of the provided template.
+- ***algorithm***: ’ER’ or ’DS’. ‘ER’ stands for using the ER approach, and ’DS’ stands for using the Dempster-Shafer theory.
+
+#### Output
+- ***B Array***: Upon completion of the algorithm, the B array is updated with the final calculation results. It reflects the degree of belief in each proposition or evaluation grade for the object being assessed after combining all available evidence. The first numofPropositions members in the B represent the belief degree in each proposition after evidence fusion. The last member of the B represents the belief degree in the global uncertainty.
+- ***False (Boolean)***: It returns True if the algorithm successfully executes and completes all computations. If any error is encountered during execution (e.g., division by zero), it returns False.
+
+## Quick Start
+Here is a basic usage example of <kbd>***ERTool***</kbd>.
+
+Consider a medical scenario. 
+There are three medical experts (weights 10, 8, and 5). For one patient, the three experts rated the different likelihood of the diagnosis of cold, common pneumonia, COVID-19, and other diseases. As shown in the table.
+
+| Experts & Diseases | Expert 1 | Expert 2 | Expert 3 |
+| :---:        |    :----:   |  :---: |  :---: |
+| Cold | 90% | 0 | 0 |
+| Common Pneumonia |0 | 90% | 0|
+| COVID-19 | 0 | 0 | 90% |
+
+In this case, the ***numOfEvidence*** is 3 (the number of experts) and the ***numOfPropositions*** is 3 (cold, common pneumonia and COVID-19).
+
+The ***W*** array is the weights array of every expert and the <kbd>***ERTool***</kbd> package can normalize them automatically.
+
+We can write the code using the <kbd>***ERTool***</kbd> package:
+
+```python
+from ertool import er
+import numpy as np
+
+W = np.array([10,8,5])
+DBF = np.array([[0.9, 0, 0], 
+                [0, 0.9, 0], 
+                [0, 0, 0.9]])
+
+# List or numpy array are both OK.
+# W = [10,8,5]
+# DBF = [[0.9, 0, 0], 
+#        [0, 0.9, 0], 
+#        [0, 0, 0.9]]
+
+numOfEvidence = 3
+numOfPropositions = 3
+B = er.er_algorithm(W, DBF, numOfEvidence, numOfPropositions)
+print("The result: ", B)
+
+P = ['Cold', 'Common Pneumonia', 'COVID-19']
+er.show_er_result(B, P)
+```
+With the code, we can calculate the probability that the patient will be diagnosed with each disease using evidential reasoning.
+
+```
+The result: [0.43317251 0.307059 0.16390311 0.09586537]
+```
+The calculation results show that the probability of the patient being diagnosed with a cold, common pneumonia, and COVID-19 are 0.43317251, 0.307059, and 0.16390311, respectively. The last member of B represents global uncertainty, and it is 0.09586537 in this example.
+
+## Contributing
+Contributions to <kbd>***ERTool***</kbd> are welcome. Please contact us for how to contribute to the project.
+
+## Reference
+Tongyue Shi, Liya Guo, Zeyuan Shen, Guilan Kong. ERTool: A Python Package for Simple and Efficient Implementation of Multi-source Evidence Fusion Based on the Evidential Reasoning Approach. Health Data Science. 2024.
+
+## Contact
+This project is supported by **[Peking University](https://english.pku.edu.cn/)**. For any questions or suggestions, please contact us at *tyshipku@gmail.com*.
