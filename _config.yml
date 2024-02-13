@@ -13,7 +13,7 @@ minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "
 
 # Site Settings
 locale                   : "en-US"
-title                    : "ERTool Online"
+title                    : "ERTool's Webpage"
 title_separator          : "-"
 name                     : &name "ERTool"
 description              : &description "personal description"
@@ -210,6 +210,11 @@ collections:
   cn:
     output: true
     permalink: /:collection/:path/
+  quickstart:
+    output: true
+    permalink: /:collection/:path/
+
+
 
 # Defaults
 defaults:
@@ -282,7 +287,14 @@ defaults:
       layout: single
       author_profile: true
       share: true
-
+  # _works
+  - scope:
+      path: ""
+      type: quickstart
+    values:
+      layout: single
+      author_profile: true
+      share: true
 
 # Sass/SCSS
 sass:

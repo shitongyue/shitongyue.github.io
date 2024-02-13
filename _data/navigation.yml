@@ -1,8 +1,11 @@
 # main links links
 main:
 
-  # - title: "Introdction"
-  #   url: /cv/
+  - title: "Instruction"
+    url: /cv/
+
+  - title: "Quick Start"
+    url: /quickstart/
 
   # - title: "Portfolio"
   #   url: /portfolio/
@@ -22,11 +25,11 @@ main:
   # - title: "Works"
   #   url: /works/
 
-  - title: "Start"
+  - title: "ERTool Online"
     url: 'http://120.53.241.60:8008/'
 
   # - title: "Learning"
   #   url: /teaching/    
 
-  - title: "Chinese"
+  - title: "中文"
     url: /cn/
