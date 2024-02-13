@@ -1,19 +1,32 @@
 # main links links
 main:
-  - title: "About Me"
-    url: "/#about-me"
 
-  - title: "Educations"
-    url: "/#-educations"
+  # - title: "Introdction"
+  #   url: /cv/
 
-  - title: "Publications"
-    url: "/#-publications"
+  # - title: "Portfolio"
+  #   url: /portfolio/
+        
+  # - title: "Blog Posts"
+  #   url: /year-archive/
+  
+  # - title: "Chinese"
+  #   url: /markdown/
 
-  - title: "Honors and Awards"
-    url: "/#-honors-and-awards"
+  # - title: "Experience"
+  #   url: /experience/
 
-  - title: "Conferences"
-    url: "/#-conferences"
+  # - title: "Awards & Honors"
+  #   url: /awards/
 
-  - title: "Internships"
-    url: "/#-internships"
+  # - title: "Works"
+  #   url: /works/
+
+  - title: "Start"
+    url: 'http://120.53.241.60:8008/'
+
+  # - title: "Learning"
+  #   url: /teaching/    
+
+  - title: "Chinese"
+    url: /cn/
