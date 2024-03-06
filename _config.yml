@@ -88,7 +88,7 @@ analytics:
 author:
   name             : "ERTool"
   avatar           : "ertool_logo.png"
-  bio              : "Simple and Efficient Implementation of Multi-source Evidence Fusion Based on the Evidential Reasoning Approach"
+  bio              : "A Python Package for Efficient Implementation of the Evidential Reasoning Approach for Multi-Source Evidence Fusion."
   location         : "Python & WEB"
   employer         :
   pubmed           : 
@@ -102,7 +102,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : 
+  github           : "https://www.github.com/STYAI/ERTool"
   google_plus      :
   keybase          :
   instagram        :
