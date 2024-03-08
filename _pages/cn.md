@@ -1,33 +1,28 @@
 ---
 permalink: /cn/
-title: "关于ERTool"
+title: "Contact"
 author_profile: true
 redirect_from: 
   - /cn/
   - /cn.html
 ---
-ERTool是一个利用证据推理方法进行多源证据融合的开源Python库。
-
-ERTool Online是利用ERTool进行多源证据融合的在线网页版工具。
-
-## 联系方式
+## Contact Information
 
 ### Tongyue Shi
 * tyshipku@gmail.com
-* 北京大学健康医疗大数据国家研究院
-* 北京大学人工智能研究院
+* National Institute of Health Data Science, Peking University, Beijing, China
+* Institute for Artificial Intelligence, Peking University, Beijing, China
 
 ### Liya Guo
 * gly22@mails.tsinghua.edu.cn
-* 清华大学丘成桐数学科学中心
-* 清华大学数学科学学院
+* Yau Mathematical Sciences Center, Tsinghua University, Beijing, China
 
 ### Zeyuan Shen
 * zs2902@nyu.edu
-* 纽约大学坦登工学院
+* Tandon School of Engineering, New York University, New York, USA
 
 ### Guilan Kong
 * guilan.kong@hsc.pku.edu.cn
-* 北京大学健康医疗大数据国家研究院
-* 北京大学人工智能研究院
-* 北京大学信息技术高等研究院
+* National Institute of Health Data Science, Peking University, Beijing, China
+* Institute for Artificial Intelligence, Peking University, Beijing, China
+* Advanced Institute of Information Technology, Peking University, Hangzhou, China
