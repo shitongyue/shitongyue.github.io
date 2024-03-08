@@ -1,6 +1,6 @@
 ---
 permalink: /cn/
-# title: "Contact"
+title: "Contact Information"
 author_profile: true
 redirect_from: 
   - /cn/
