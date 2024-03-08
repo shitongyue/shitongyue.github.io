@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Quick Start"
+# title: "Quick Start"
 permalink: /quickstart/
 author_profile: true
 redirect_from:

@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "About ERTool"
+# title: "About ERTool"
 author_profile: true
 redirect_from: 
   - /about/
