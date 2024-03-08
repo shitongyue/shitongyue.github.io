@@ -6,8 +6,6 @@ redirect_from:
   - /cn/
   - /cn.html
 ---
-## Contact Information
-
 ### Tongyue Shi
 * tyshipku@gmail.com
 * National Institute of Health Data Science, Peking University, Beijing, China
