@@ -26,7 +26,7 @@ pip install ertool
 Tongyue Shi, Liya Guo, Zeyuan Shen and Guilan Kong. ERTool: A Python Package for Efficient Implementation of the Evidential Reasoning Approach for Multi-Source Evidence Fusion. 2024.
 
 ## Acknowledgments
-We appreciate the great support of Professors [Jian-Bo Yang](https://personalpages.manchester.ac.uk/staff/jian-bo.yang/) and [Dong-Ling Xu](https://research.manchester.ac.uk/en/persons/ling.xu) from the Decision and Cognitive Sciences Research Centre at The University of Manchester, UK.
+We appreciate the great support of Professors [Jian-Bo Yang](https://research.manchester.ac.uk/en/persons/jian-bo.yang) and [Dong-Ling Xu](https://research.manchester.ac.uk/en/persons/ling.xu) from the Decision and Cognitive Sciences Research Centre at The University of Manchester, UK.
 
 ## Contributing
 Contributions to **ERTool** are welcome. Please contact us for how to contribute to the project.
