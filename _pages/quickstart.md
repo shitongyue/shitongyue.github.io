@@ -8,7 +8,7 @@ redirect_from:
 ---
 {% include base_path %}
 
-### Here is a basic usage example of **ERTool**.
+## Here is a basic usage example of **ERTool**.
 
 Consider a medical scenario. 
 There are three medical experts (weighted 10, 8, and 5). For one patient, the three experts rated the different likelihood of the diagnosis of cold, common pneumonia and COVID-19. As shown in the table.
@@ -55,18 +55,18 @@ The result:  [0.56182081 0.39411809 0.02924234 0.01481876]
 ```
 The calculation results show that the probability of the patient being diagnosed with a cold, common pneumonia, and COVID-19 are 0.56182081, 0.39411809 and 0.02924234, respectively. The last member of B represents global uncertainty, and it is 0.01481876 in this example.
 
-### How to do multi-level multi-source evidence fusion?
+## How to do multi-level multi-source evidence fusion?
 
-#### Step 1: Define the evaluation framework of the multi-level multi-attribute assessment problem.
+### Step 1: Define the evaluation framework of the multi-level multi-attribute assessment problem.
 First, we define the above two-level multi-attribute assessment problem using the ER framework.
 
-#### Step 2: Build the “Objects” folder and store the data files in corresponding subfolders.
+### Step 2: Build the “Objects” folder and store the data files in corresponding subfolders.
 Secondly, we build the “Objects” folder and its subfolders according to the evaluation framework. Save the survey data about each attribute (research funding, research outcomes, teaching materials, teaching methods) of the three institutes from surveyed students and faculties together with corresponding weight to different CSV files, respectively. Put different evidence data files (Evidence1_Student.csv and Evidence2_Faculty.csv) and the data files for storing evidence combined results (Objects_combined.csv, Research_combined.csv, Research_Funding_combined.csv, Reseach_Outcomes_combined.csv, Teaching_combined.csv, Teaching_Materials_combined.csv, Teaching_Methods_combined.csv) to their corresponding subfolders.
 
-#### Step 3: Call the function to get evidence fusion results.
+### Step 3: Call the function to get evidence fusion results.
 Finally, we can call the multi_level_multi_source()function using the path of the “Objects” folder as input, and the output results will be written to “Objects_combined.csv” file by running the following codes:
 ```
 from ertool import er
 er.multi_level_multi_source(*)
 ```
-Here, “*” represents the path of “Objects” folder. For example, it can be "/Users/pkuer/Documents/Objects".
+Here, “*” represents the path of “Objects” folder. For example, it can be "/Users/Documents/Objects".

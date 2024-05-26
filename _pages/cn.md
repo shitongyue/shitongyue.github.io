@@ -7,16 +7,16 @@ redirect_from:
   - /cn.html
 ---
 ### Tongyue Shi
-* Peking University, Beijing, China
+Peking University, Beijing, China
 
 ### Liya Guo
-* Tsinghua University, Beijing, China
+Tsinghua University, Beijing, China
 
 ### Zeyuan Shen
-* New York University, New York, USA
+New York University, New York, USA
 
 ### Guilan Kong
-* Peking University, Beijing, China
+Peking University, Beijing, China
 
 ### Contact
 This project is supported by Peking University. For any questions or suggestions, please contact us at *tyshipku@gmail.com*.
