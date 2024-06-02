@@ -70,3 +70,5 @@ from ertool import er
 er.multi_level_multi_source(*)
 ```
 Here, “*” represents the path of “Objects” folder. For example, it can be "/Users/Documents/Objects".
+
+![Figure](https://ertool.online/images/fig6.png)
