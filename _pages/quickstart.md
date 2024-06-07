@@ -10,7 +10,7 @@ redirect_from:
 
 ## Here are some basic usage examples of **ERTool**.
 
-### Example 1
+### Example 1: a medical scenario
 
 Consider a medical scenario.
 
@@ -58,8 +58,47 @@ The result:  [0.56182081 0.39411809 0.02924234 0.01481876]
 ```
 The calculation results show that the probability of the patient being diagnosed with a cold, common pneumonia, and COVID-19 are 0.56182081, 0.39411809 and 0.02924234, respectively. The last member of B represents global uncertainty, and it is 0.01481876 in this example.
 
+### Example 2: a car brand selection scenario
 
-### Example 2
+Consider a car brand selection scenario.
+
+We have now invited a car evaluator to evaluate cars from five brands, including Ford, Tesla, Audi, Volkswagen and BMW, based on four aspects: Acceleration, Braking, Horsepower and Powertrain. Assume that the four aspects are equally weighted.
+
+We can write the following code to use ERTool to integrate the four aspects of evidence.
+
+```python
+from ertool import er
+import numpy as np
+
+W = np.array([1,1,1,1])
+DBF = np.array([
+ [0.173, 0.118, 0.054, 0.356, 0.298],
+ [0.174, 0.207, 0.181, 0.427, 0.011],
+ [0.160, 0.211, 0.283, 0.093, 0.253],
+ [0.367, 0.325, 0.179, 0.017, 0.012]
+])
+
+numOfEvidence = 4
+numOfPropositions = 5
+B = er.er_algorithm(W, DBF, numOfEvidence, numOfPropositions)
+print("The result: ", B)
+
+car_brands = ["Ford", "Tesla", "Audi", "Volkswagen", "BMW"]
+
+er.show_er_result(B, P=car_brands, fig_name="Car Selection on Performance", xlabel_name="Car Brands")
+```
+
+We can get the following results in the figure below.
+
+![Figure](https://ertool.online/images/output4.png)
+
+At the same time, we used IDS software to perform the same operation and obtained the same results as shown in the figure below.
+
+![Figure](https://ertool.online/images/output4o.png)
+
+This above example not only demonstrates the usage of ERTool, but also verifies ERTool's correctness.
+
+### Example 3: a quality assessment scenario
 
 Consider a quality assessment scenario.
 
