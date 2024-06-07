@@ -94,7 +94,7 @@ We can get the following results in the figure below.
 
 At the same time, we used IDS software to perform the same operation and obtained the same results as shown in the figure below.
 
-![Figure](https://ertool.online/images/output4o.png)
+![Figure](https://ertool.online/images/output4o.jpg)
 
 This above example not only demonstrates the usage of ERTool, but also verifies ERTool's correctness.
 
