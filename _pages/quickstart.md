@@ -62,7 +62,7 @@ The calculation results show that the probability of the patient being diagnosed
 
 Consider a car brand selection scenario.
 
-We have now invited a car evaluator to evaluate cars from five brands, including Ford, Tesla, Audi, Volkswagen and BMW, based on four aspects: Acceleration, Braking, Horsepower and Powertrain. Assume that the four aspects are equally weighted.
+We have now invited a car evaluator to evaluate cars from five brands, including Ford, Tesla, Audi, Volkswagen and BMW, based on four aspects: Acceleration, Braking, Horsepower and Powertrain. Assume that the four aspects are equally weighted. Please note: The raw data in this example is randomly generated for demonstration purposes only.
 
 We can write the following code to use ERTool to integrate the four aspects of evidence.
 
