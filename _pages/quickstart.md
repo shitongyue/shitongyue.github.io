@@ -102,7 +102,7 @@ This above example not only demonstrates the usage of ERTool, but also verifies 
 
 Consider a quality assessment scenario.
 
-We used both ERTool and IDS software to do evidence fusion for combining Expert judgments about the medical quality of three hospitals from medical facilities (MF), medical staff (MS), medical processes (MP), and medical outcomes (MO) perspectives. The summary statistics of patient feedback on the medical quality of Hospitals A, B, and C from the four different perspectives.
+We used both ERTool and IDS software to do evidence fusion for combining Expert judgments about the medical quality of three hospitals from medical facilities (MF), medical staff (MS), medical processes (MP), and medical outcomes (MO) perspectives.
 
 This example is from a published paper: Kong, Guilan, et al. "Combined medical quality assessment using the evidential reasoning approach." *Expert Systems with Applications* 42.13 (2015): 5522-5530.
 
